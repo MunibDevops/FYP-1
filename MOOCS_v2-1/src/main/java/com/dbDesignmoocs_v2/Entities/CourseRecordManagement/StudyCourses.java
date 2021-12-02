@@ -10,10 +10,14 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.dbDesignmoocs_v2.Entities.CourseExecution.CourseOffers;
+import com.dbDesignmoocs_v2.Entities.LearnerPerformanceEvaluation.Certificates;
+import com.dbDesignmoocs_v2.Entities.LearnerRecordManagement.CourseRegistrations;
 
 @Entity
 @Table(name="StudyCourses")
@@ -49,6 +53,11 @@ public class StudyCourses {
 	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "StudyCourses")
 	List<CourseContents>listofCourseContents=new ArrayList<>();
 	
+	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "StudyCourses")
+	List<CourseRegistrations> courseRegistrationList =new ArrayList<>();
 	
-	
+
+	@OneToOne
+	@JoinColumn(name="certificateId",referencedColumnName = "certificateId")
+	Certificates certificate;
 }

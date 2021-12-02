@@ -31,13 +31,13 @@ public class Rukuhaat {
 	@ManyToOne
 	@JoinColumn(name="surahId")
 	Surahs surah;
-	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "Rukuhaat",orphanRemoval=true)
+	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "rukuh",orphanRemoval=true)
 	private List<Ayaat>ayat = new ArrayList<>();
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "Rukuhaat",orphanRemoval=true)
+	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "rukuh",orphanRemoval=true)
 	private List<LearningResources> learningRes=new ArrayList<>();
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "Rukuhaat",orphanRemoval=true)
+	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "rukuh",orphanRemoval=true)
 	private List<CourseContents> courseContent=new ArrayList<>();
 
 }

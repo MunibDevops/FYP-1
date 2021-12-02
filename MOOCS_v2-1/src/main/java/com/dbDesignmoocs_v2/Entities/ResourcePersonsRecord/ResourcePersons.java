@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -27,11 +28,13 @@ public class ResourcePersons {
 	private String userName;
 	private String firstName;
 	private String lastName;
+	@Column(unique = true)
 	private String email;
 	private String password;
 	private long phoneNo;
 	private String country;
 	private String gender;
+	@Column(unique = true)
 	private long cnic;
 	private Date dob;
 	private String role;

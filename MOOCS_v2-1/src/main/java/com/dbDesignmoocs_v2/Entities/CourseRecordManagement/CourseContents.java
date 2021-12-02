@@ -11,7 +11,7 @@ public class CourseContents {
 
 	@ManyToOne
 	@JoinColumn(name="courseId")
-	StudyCourses studyCourse;
+	StudyCourses StudyCourses;
 	
 	@ManyToOne
 	@JoinColumn(name="rukuhId")
