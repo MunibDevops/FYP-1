@@ -2,6 +2,7 @@ package com.dbDesignmoocs_v2.Entities.LearnerPerformanceEvaluation;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,6 +25,9 @@ public class Certificates {
 	@ManyToOne
 	@JoinColumn(name="learnerId")
 	Learners learner;
+	
+	@Column(nullable=true)
+	
 	private Date certificateDate;
 	@OneToOne(mappedBy = "certificate")
 	StudyCourses courses;

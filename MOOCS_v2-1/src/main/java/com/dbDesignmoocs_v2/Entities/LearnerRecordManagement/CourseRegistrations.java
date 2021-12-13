@@ -29,7 +29,7 @@ public class CourseRegistrations {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long Id;
 	
-	@Column(unique = true)
+	@Column(unique = true,nullable=true)
 	private long crId;
 	
 	@ManyToOne

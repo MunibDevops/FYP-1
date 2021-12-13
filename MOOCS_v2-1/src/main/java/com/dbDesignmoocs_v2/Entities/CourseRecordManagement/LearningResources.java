@@ -3,6 +3,7 @@ package com.dbDesignmoocs_v2.Entities.CourseRecordManagement;
 import java.util.*;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,9 +24,13 @@ public class LearningResources {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long resourceId;
+	@Column(nullable=true)
 	private String resourceType;
+	@Column(nullable=true)
 	private String resourceName;
+	@Column(nullable=true)
 	private String resourceText;
+	@Column(nullable=true)
 	private String resourceOther;  //path of resource
 	
 	@ManyToOne

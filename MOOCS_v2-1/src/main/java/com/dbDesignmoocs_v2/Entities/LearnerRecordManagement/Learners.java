@@ -26,20 +26,28 @@ public class Learners {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long learnerId;
-	@Column(unique = true)
+	@Column(unique = true,nullable=true)
 	private String userName;
+	@Column(nullable=true)
 	private String firstName;
+	@Column(nullable=true)
 	private String lastName;
-	@Column(unique = true)
+	
+	@Column(unique = true,nullable=true)
 	private String email;
+	@Column(nullable=true)
 	private String password;
-	@Column(unique = true)
+	@Column(unique = true,nullable=true)
 	private long phoneNumber;
+	@Column(nullable=true)
 	private String country;
+	@Column(nullable=true)
 	private String gender;
-	@Column(unique = true)
+	@Column(unique = true,nullable=true)
 	private long cnic;
+	@Column(nullable=true)
 	private Date dob;
+	@Column(nullable=true)
 	private String role;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "learner",orphanRemoval=true)

@@ -19,16 +19,19 @@ public class Surahs {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long surahId;
+	@Column(nullable=true)
 	private String surahName;
+	@Column(nullable=true)
 	private long totalAyaat;
+	@Column(nullable=true)
 	private long totalRukuhaat;
-	@Column(length = 150)
+	@Column(length = 150,nullable=true)
 	private String urduIntroduction;
-	@Column(length = 150)
+	@Column(length = 150,nullable=true)
 	private String englishIntroduction;
-	@Column(length = 500)
+	@Column(length = 500,nullable=true)
 	private String urduSummary;
-	@Column(length = 500)
+	@Column(length = 500,nullable=true)
 	private String englishSummary;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "Surahs",orphanRemoval=true)

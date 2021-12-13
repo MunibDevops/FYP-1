@@ -1,5 +1,6 @@
 package com.dbDesignmoocs_v2.Entities.ResourcePersonsRecord;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,7 @@ public class ProfessionalLearnings {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long professionalCourseId;
-	
+	@Column(nullable = true)
 	private String proferssionalCourseTitle;
 	
 	@ManyToOne

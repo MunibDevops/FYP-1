@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.persistence.*;
 
-import org.hibernate.annotations.ForeignKey;
 
 
 
@@ -16,13 +15,21 @@ public class Ayaat {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long ayatId;
+	@Column(nullable=true)
 	private long ayatNo;
+	@Column(nullable=true)
 	private long ayatSequence;
+	@Column(nullable=true)
 	private String surahName;
+	@Column(nullable=true)
 	private String arabicText;
+	@Column(nullable=true)
 	private String urduTranslation;
+	@Column(nullable=true)
 	private String englishTranslation;
+	@Column(nullable=true)
 	private String urduSummary;
+	@Column(nullable=true)
 	private String englishSummary;
 	
 	@ManyToOne

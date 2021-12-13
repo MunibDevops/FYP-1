@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,14 +25,18 @@ public class TestAttempts {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long testItemId;
-	
+	@Column(nullable=true)
 	private long crId;
 	
-	private long testAttempts;
+	
 	
 	@ManyToOne
 	@JoinColumn(name="learnerId")
 	Learners learner;
+	
+	@ManyToOne
+	@JoinColumn(name="testItemId")
+	TestItems testItem;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "testAttempt",orphanRemoval=true)
 	List<CourseRegistrations> courseRegistration=new ArrayList<>();
