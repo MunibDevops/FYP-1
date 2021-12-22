@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../sidebar.css">
+
+    <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title th:text="${title}">Base HTML</title>
+    </head>
+    <body>
+    <section style="float:left" th:fragment="sidebar" >
+   <div class="sidebar" style="width:130%">
+   <div class="card">
+   <div class="card-body">
+	<h3>Related Links</h3>
+	<ul class="side-block">
+	
+			<li><a style="text-decoration: none;" th:href="@{home}">Home</a></li>
+			<li><a style="text-decoration: none;" th:href="@{courses}">Learning Service</a>&nbsp<i class="fas fa-chevron-right"></i></li>
+			<li><a style="text-decoration: none;" th:href="@{test-service}">Testing Service</a>&nbsp<i class="fas fa-chevron-right"></i></li>
+			<li><a style="text-decoration: none;" th:href="@{panel}">My Account / Panel</a>&nbsp<i class="fas fa-chevron-right"></i></li>
+			<li><a style="text-decoration: none;" th:href="@{about}">About Muallim</a>&nbsp<i class="fas fa-chevron-right"></i></li>
+			<li><a style="text-decoration: none;" th:href="@{about-team}">About Team</a>&nbsp<i class="fas fa-chevron-right"></i></li>
+			<li><a style="text-decoration: none;" th:href="@{authenticity}">Authenticity</a>&nbsp<i class="fas fa-chevron-right"></i></li>
+			<li><a style="text-decoration: none;" th:href="@{contact}">Contact</a>&nbsp<i class="fas fa-chevron-right"></i></li>
+	
+	</ul>
+</div>
+</div>
+</div>    
+    
+    </section>
+    
+     </body>
+    </html>
