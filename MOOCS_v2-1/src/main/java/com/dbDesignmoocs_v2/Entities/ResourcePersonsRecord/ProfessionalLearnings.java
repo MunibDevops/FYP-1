@@ -20,6 +20,51 @@ public class ProfessionalLearnings {
 	
 	@ManyToOne
 	@JoinColumn(name="resourcePersonId")
-	ResourcePersons resPers;
+	ResourcePersons ResourcePersons;
 
+	public ProfessionalLearnings() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ProfessionalLearnings(long professionalCourseId, String proferssionalCourseTitle, ResourcePersons ResourcePersons) {
+		super();
+		this.professionalCourseId = professionalCourseId;
+		this.proferssionalCourseTitle = proferssionalCourseTitle;
+		this.ResourcePersons = ResourcePersons;
+	}
+
+	public long getProfessionalCourseId() {
+		return professionalCourseId;
+	}
+
+	public void setProfessionalCourseId(long professionalCourseId) {
+		this.professionalCourseId = professionalCourseId;
+	}
+
+	public String getProferssionalCourseTitle() {
+		return proferssionalCourseTitle;
+	}
+
+	public void setProferssionalCourseTitle(String proferssionalCourseTitle) {
+		this.proferssionalCourseTitle = proferssionalCourseTitle;
+	}
+
+	public ResourcePersons getResPers() {
+		return ResourcePersons;
+	}
+
+	public void setResPers(ResourcePersons ResourcePersons) {
+		this.ResourcePersons = ResourcePersons;
+	}
+
+	@Override
+	public String toString() {
+		return "ProfessionalLearnings [professionalCourseId=" + professionalCourseId + ", proferssionalCourseTitle="
+				+ proferssionalCourseTitle + ", resPers=" + ResourcePersons + "]";
+	}
+
+	
+	
+	
 }

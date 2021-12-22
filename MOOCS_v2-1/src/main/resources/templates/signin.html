@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Authenticity</title>
+	
+	</head>
+	<body>
+	
+	<section>
+	<div class="reg-wrapper reg-page">
+	<div class="reg-outer">
+		<div class="reg-inner">
+			<div class="reg-title">
+				<h5>Muallim</h5>
+				<p>Learn Quran with Muallim for free.</p>
+			</div>
+
+			<!-- Tab content -->
+			<div id="login" class="tabcontent active">
+
+				<form action="" method="POST" id="loginForm" role="form">
+					<div class="form-group">
+						<label for="">Username</label>
+						<input type="text" class="form-control" id="loginUserName" name="username" placeholder="Username or Email" required>
+					</div>
+					<div class="form-group">
+						<label for="">Password</label>
+						<input type="password" class="form-control" id="loginpass" name="password" placeholder="Password" required>
+					</div>
+					<br>
+					<!-- <a href="#" class="text-link"><b>Forgot password?</b></a><br> -->
+					<div class="form-group">
+						<input id="login-btn" type="submit" class="ex-btn" name="login-btn" value="Log in">
+					</div>
+					<div class="message login-message"></div>
+				</form>
+				<a class="have-account" href="signup.php"><b><i>Signup / Register</i></b></a>
+			</div>
+
+		</div>
+	</div>
+</div>
+	</section>
+	</body>
+	

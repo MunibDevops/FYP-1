@@ -6,13 +6,29 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Achievements")
 public class Achievements {
 	
+
+	public Achievements() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+	public Achievements(long achievementId, String achievement, ResourcePersons ResourcePersons) {
+		super();
+		this.achievementId = achievementId;
+		this.achievement = achievement;
+		this.ResourcePersons = ResourcePersons;
+	}
+
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,8 +37,53 @@ public class Achievements {
 	private String achievement;
 	
 	
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name="resourcePersonId")
-	ResourcePersons resPers;
+	ResourcePersons ResourcePersons;
+
+
+	public long getAchievementId() {
+		return achievementId;
+	}
+
+
+
+	public void setAchievementId(long achievementId) {
+		this.achievementId = achievementId;
+	}
+
+
+
+	public String getAchievement() {
+		return achievement;
+	}
+
+
+
+	public void setAchievement(String achievement) {
+		this.achievement = achievement;
+	}
+
+
+
+	public ResourcePersons getResPers() {
+		return ResourcePersons;
+	}
+
+
+
+	public void setResPers(ResourcePersons ResourcePersons) {
+		this.ResourcePersons = ResourcePersons;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Achievements [achievementId=" + achievementId + ", achievement=" + achievement + ", resPers=" + ResourcePersons
+				+ "]";
+	}
+	
+	
 	
 }

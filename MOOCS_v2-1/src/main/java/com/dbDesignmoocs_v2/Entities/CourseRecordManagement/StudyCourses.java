@@ -59,10 +59,10 @@ public class StudyCourses {
 	@Column(nullable=true)
 	private String courseThumbnail;     // path of thumbnail
 
-	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "StudyCourses")
+	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "studycourse")
 	List<ResourceDefinition>listofResourceDefinition=new ArrayList<>();
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "StudyCourses")
+	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "studycourse")
 	List<CourseOffers>listofCourseOffers=new ArrayList<>();
 	
 	@ManyToMany(cascade = { CascadeType.ALL })
@@ -72,7 +72,7 @@ public class StudyCourses {
             inverseJoinColumns = { @JoinColumn(name = "rukuhId") })
 	List<Rukuhaat>listofRukuhaat=new ArrayList<>();
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "StudyCourses")
+	@OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "studyCourse")
 	List<CourseRegistrations> courseRegistrationList =new ArrayList<>();
 	
 

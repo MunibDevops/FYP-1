@@ -38,6 +38,67 @@ public class CourseOffers {
 	@ManyToOne
 	@JoinColumn(name="courseId")
 	StudyCourses studycourse;
+
+	public CourseOffers() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public CourseOffers(long courseOfferId, Date offeredDate, Date endDate, String status, StudyCourses studycourse) {
+		super();
+		this.courseOfferId = courseOfferId;
+		this.offeredDate = offeredDate;
+		this.endDate = endDate;
+		this.status = status;
+		this.studycourse = studycourse;
+	}
+
+	public long getCourseOfferId() {
+		return courseOfferId;
+	}
+
+	public void setCourseOfferId(long courseOfferId) {
+		this.courseOfferId = courseOfferId;
+	}
+
+	public Date getOfferedDate() {
+		return offeredDate;
+	}
+
+	public void setOfferedDate(Date offeredDate) {
+		this.offeredDate = offeredDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public StudyCourses getStudycourse() {
+		return studycourse;
+	}
+
+	public void setStudycourse(StudyCourses studycourse) {
+		this.studycourse = studycourse;
+	}
+
+	@Override
+	public String toString() {
+		return "CourseOffers [courseOfferId=" + courseOfferId + ", offeredDate=" + offeredDate + ", endDate=" + endDate
+				+ ", status=" + status + ", studycourse=" + studycourse + "]";
+	}
+	
 	
 	
 

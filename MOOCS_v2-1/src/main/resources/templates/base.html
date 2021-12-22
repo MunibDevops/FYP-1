@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Bootstrap CSS -->
+			<link rel="stylesheet" th:href="@{/css/style.css}" />
+			<link rel="stylesheet" th:href="@{/css/fontawesome-all.css}"/>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+			<link rel="icon" href="images/favicon-quran.svg" type="image/svg" sizes="16x16"> 
+			<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa:400,700&amp;subset=arabic" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Merriweather:300i,400,400i,700,700i,900|Open+Sans:300i,400,400i,600,600i,700,700i,800|Aref+Ruqaa:400,700&amp;subset=arabic" rel="stylesheet">
+			<link rel="stylesheet" href="css/swiper.min.css">
+			<title th:text="${title}">Base HTML</title>
+    
+    
+    
+	<link rel="icon" href="images/favicon-quran.svg" type="image/svg" sizes="16x16"> 
+     
+    
+  </head>
+ 
+  <body>
+  	 <div class="notification"></div>
+	<div class="header">
+		<div class="container-fw">
+			<div class="logo">
+				<a href="#" th:href="@{home}" ><img src="images/logo-v3.jpg" alt=""></a>
+			</div>
+			
+			<div class="center-logo">
+				<img src="images/header-verses-v.png" alt="">
+			</div>
+			<div class="header-right">
+			<a class="ex-btn trs-03" th:href="@{signup}">Sign Up</a>&nbsp&nbsp&nbsp
+					<div class="item active">
+					<a class="ex-btn trs-03" th:href="@{signin}">Log in</a>&nbsp&nbsp&nbsp</div>
+			
+					<div class="menu">
+					<div class="menu-item parent">
+						<a href="#" class="ex-btn trs-03">Explore<i class="fas fa-chevron-down"></i></a>
+						
+						<div class="menu-wrap">
+							<ul class="submenu" style="font-family:verdana">
+								<li><a style="text-decoration: none;" th:href="@{courses}">Learning Service</a><i class="fas fa-chevron-right"></i></li>
+								<li><a style="text-decoration: none;" th:href="@{test-service}">Testing Service</a><i class="fas fa-chevron-right"></i></li>
+								<li><a style="text-decoration: none;" th:href="@{panel}">My Account / Panel</a><i class="fas fa-chevron-right"></i></li>
+								<li><a style="text-decoration: none;" th:href="@{about}">About Muallim</a><i class="fas fa-chevron-right"></i></li>
+								<li><a style="text-decoration: none;" th:href="@{about-team}">About Team</a><i class="fas fa-chevron-right"></i></li>
+								<li><a style="text-decoration: none;" th:href="@{authenticity}">Authenticity</a><i class="fas fa-chevron-right"></i></li>
+								<li><a style="text-decoration: none;" th:href="@{contact}">Contact</a><i class="fas fa-chevron-right"></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+  
+     <div th:replace="${content}"></div>
+     
+     
+     	<div  class="footer">
+		<div class="container-fw">
+			<div class="footer-inner">
+				<div class="footer-blurb">
+					<div class="footer-logo">
+						<a class="logo-link" th:href="@{home}">Muallim <div class="sub-txt">Learning & Testing Service</div></a>
+						<p>Muallim provides an integrated learning and testing environment to facilitate understanding of the message of Quran-il-Hakeem.</p>
+						<span>© <b>Muallim.</b> All rights reserved.</span>
+					</div>
+				</div>
+				<div class="footer-links">
+					<ul class="ul-outer">
+						<li class="li-outer">
+							<ul>
+								<li><span>Quick Links</span></li>
+								<li><a style="text-decoration: none;" th:href="@{home}">Home</a></li>
+								<li><a style="text-decoration: none;" th:href="@{about}">About</a></li>
+								<li><a style="text-decoration: none;" th:href="@{courses}">Resourses</a></li>
+								<li><a style="text-decoration: none;" th:href="@{authenticity}">Authenticity of Resources</a></li>
+							</ul>
+						</li>
+						<li class="li-outer">
+							<ul>
+								<li><span>Services</span></li>
+								<li>
+									<b>Learning</b>
+									<ul class="sub-link">
+										<li>Translations</li>
+										<li>Quranic subjects</li>
+										<li>Audios</li>
+									</ul>
+								</li>
+								<li>
+									<b>Testing</b>
+									<ul class="sub-link">
+										<li>Vocabolary</li>
+										<li>Subject Oriented Test</li>
+										<li>Surah-Based Testing</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="li-outer">
+							<ul>
+								<li><span>Contact Us</span></li>
+								<li><a style="text-decoration: none;" href="mailto:">Send an email</a></li>
+								<li><a style="text-decoration: none;" href="#">Facebook</a></li>
+								<li><a style="text-decoration: none;" href="#">LinkedIn</a></li>
+								<li><a style="text-decoration: none;" href="#">Google+</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+
+
+<input type="hidden" id="ml_site_url" value="ml_get_option('site_url');" />
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+<script src="js/jquery.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

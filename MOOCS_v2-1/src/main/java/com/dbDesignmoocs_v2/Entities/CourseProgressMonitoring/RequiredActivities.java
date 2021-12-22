@@ -33,6 +33,95 @@ public class RequiredActivities {
 	@ManyToOne
 	@JoinColumn(name="peerReviewId")
 	PeerReviews peerReview;
+
+	public RequiredActivities() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public RequiredActivities(long activityId, long questionId, long assignmentId, String activity, long maxPoints,
+			long avgPoints, long minPoints, PeerReviews peerReview) {
+		super();
+		this.activityId = activityId;
+		this.questionId = questionId;
+		this.assignmentId = assignmentId;
+		this.activity = activity;
+		this.maxPoints = maxPoints;
+		this.avgPoints = avgPoints;
+		this.minPoints = minPoints;
+		this.peerReview = peerReview;
+	}
+
+	public long getActivityId() {
+		return activityId;
+	}
+
+	public void setActivityId(long activityId) {
+		this.activityId = activityId;
+	}
+
+	public long getQuestionId() {
+		return questionId;
+	}
+
+	public void setQuestionId(long questionId) {
+		this.questionId = questionId;
+	}
+
+	public long getAssignmentId() {
+		return assignmentId;
+	}
+
+	public void setAssignmentId(long assignmentId) {
+		this.assignmentId = assignmentId;
+	}
+
+	public String getActivity() {
+		return activity;
+	}
+
+	public void setActivity(String activity) {
+		this.activity = activity;
+	}
+
+	public long getMaxPoints() {
+		return maxPoints;
+	}
+
+	public void setMaxPoints(long maxPoints) {
+		this.maxPoints = maxPoints;
+	}
+
+	public long getAvgPoints() {
+		return avgPoints;
+	}
+
+	public void setAvgPoints(long avgPoints) {
+		this.avgPoints = avgPoints;
+	}
+
+	public long getMinPoints() {
+		return minPoints;
+	}
+
+	public void setMinPoints(long minPoints) {
+		this.minPoints = minPoints;
+	}
+
+	public PeerReviews getPeerReview() {
+		return peerReview;
+	}
+
+	public void setPeerReview(PeerReviews peerReview) {
+		this.peerReview = peerReview;
+	}
+
+	@Override
+	public String toString() {
+		return "RequiredActivities [activityId=" + activityId + ", questionId=" + questionId + ", assignmentId="
+				+ assignmentId + ", activity=" + activity + ", maxPoints=" + maxPoints + ", avgPoints=" + avgPoints
+				+ ", minPoints=" + minPoints + ", peerReview=" + peerReview + "]";
+	}
 	
 	
 }
